@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class IncreaseTagNameLimit < ActiveRecord::Migration[7.0]
-  uses_departure! if Rails.env.staging? || Rails.env.production?
+  #uses_departure! # disabled for self-hosted if Rails.env.staging? || Rails.env.production?
 
   def up
     change_column :tags, :name, :string, limit: 150

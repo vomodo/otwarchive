@@ -72,6 +72,8 @@ services:
       - .:/otwa
       - ./data/uploads:/otwa/public/system
       - ./logs:/otwa/log
+    ports:
+      - "127.0.0.1:3000:3000"
     depends_on:
       - db
       - redis

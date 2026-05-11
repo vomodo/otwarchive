@@ -30,7 +30,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   # Store uploaded files in S3, proxied (see config/storage.yml for options).
-  config.active_storage.service = :s3
+  config.active_storage.service = :local
   config.active_storage.resolve_model_to_route = :rails_storage_proxy
 
   # Use a different cache store in production

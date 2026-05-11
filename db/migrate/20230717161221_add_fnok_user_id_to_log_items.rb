@@ -1,5 +1,5 @@
 class AddFnokUserIdToLogItems < ActiveRecord::Migration[6.1]
-  uses_departure! if Rails.env.staging? || Rails.env.production?
+  #uses_departure! # disabled for self-hosted if Rails.env.staging? || Rails.env.production?
 
   def up
     add_column :log_items, :fnok_user_id, :integer, nullable: true

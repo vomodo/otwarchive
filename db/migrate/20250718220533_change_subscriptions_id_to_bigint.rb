@@ -1,5 +1,5 @@
 class ChangeSubscriptionsIdToBigint < ActiveRecord::Migration[7.1]
-  uses_departure! if Rails.env.staging? || Rails.env.production?
+  #uses_departure! # disabled for self-hosted if Rails.env.staging? || Rails.env.production?
 
   def up
     change_column :subscriptions, :id, "bigint NOT NULL AUTO_INCREMENT"

@@ -1,5 +1,5 @@
 class RemoveDeadColumn < ActiveRecord::Migration[6.0]
-  uses_departure! if Rails.env.staging? || Rails.env.production?
+  #uses_departure! # disabled for self-hosted if Rails.env.staging? || Rails.env.production?
 
   def change
     remove_column :external_works, :dead, :boolean
